@@ -1,0 +1,21 @@
+track GRO-seq
+superTrack on
+shortLabel GRO-seq superTrack
+longLabel GRO-seq superTrack
+
+track E2_25m_Plus
+superTrack GRO-seq full
+bigDataUrl E2_25m_Plus.bw
+shortLabel E2_25m_Plus.bw
+longLabel E2_25m_Plus.bw
+type bigWig
+visibility dense
+
+
+track E2_25m_Minus
+superTrack GRO-seq full
+bigDataUrl E2_25m_Minus.bw
+shortLabel E2_25m_Minus.bw
+longLabel E2_25m_Minus.bw
+type bigWig
+visibility dense

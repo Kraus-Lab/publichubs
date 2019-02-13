@@ -1,0 +1,5 @@
+hub testGRO-seq
+shortLabel testGRO-seq
+longLabel testGRO-seq
+genomesFile genomes.txt
+email  lee.kraus@utsouthwestern.edu
