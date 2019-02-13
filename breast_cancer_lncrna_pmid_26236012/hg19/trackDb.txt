@@ -1,6 +1,6 @@
 
-track bigGenePred1
-bigDataUrl http://pecan.swmed.edu/public/GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.gtf
+track bigGenePred
+bigDataUrl /github.com/Kraus-Lab/publichubs/blob/master/breast_cancer_lncrna_pmid_26236012/GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.bigGenePred
 shortLabel bigBed example
 longLabel test
 type bigGenePred
