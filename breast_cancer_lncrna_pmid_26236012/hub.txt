@@ -1,0 +1,5 @@
+hub lncRNA
+shortLabel lncRNA
+longLabel lncRNA KL
+genomesFile genomes.txt
+email  lee.kraus@utsouthwestern.edu

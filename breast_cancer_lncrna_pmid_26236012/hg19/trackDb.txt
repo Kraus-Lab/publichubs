@@ -1,0 +1,7 @@
+
+track bigGenePred1
+bigDataUrl http://pecan.swmed.edu/public/GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.gtf
+shortLabel bigBed example
+longLabel test
+type bigGenePred
+visibility dense
