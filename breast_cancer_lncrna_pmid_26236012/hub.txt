@@ -1,5 +1,5 @@
-hub KL_lncRNA
-shortLabel BC lncRNA
+hub LncRNA_PMID_26236012
+shortLabel BC LncRNA PMID 26236012
 longLabel Breast Cancer LncRNA PMID 26236012
 genomesFile genomes.txt
 email  lee.kraus@utsouthwestern.edu
