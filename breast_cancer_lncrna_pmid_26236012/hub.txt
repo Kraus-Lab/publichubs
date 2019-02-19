@@ -1,5 +1,6 @@
 hub LncRNA_PMID_26236012
-shortLabel BC LncRNA PMID 26236012
-longLabel Breast Cancer LncRNA PMID 26236012
+shortLabel Breast Cancer lncRNA
+longLabel Breast Cancer lncRNA PMID 26236012
+descriptionUrl https://www.ncbi.nlm.nih.gov/pubmed/26236012
 genomesFile genomes.txt
 email  lee.kraus@utsouthwestern.edu
