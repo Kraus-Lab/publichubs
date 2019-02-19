@@ -1,7 +1,7 @@
 # publichubs
 Kraus Lab data hub to visualize on UCSC Genome Browser:
 
-#Kraus Lab Breast Bancer lncRNA track (pmid: 26236012)
+### 1. Kraus Lab Breast Bancer lncRNA track (pmid: 26236012)
 
 Step1:
 Download gtfToGenePred and then genePredToBigGenePred
