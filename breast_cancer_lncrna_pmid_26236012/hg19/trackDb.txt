@@ -3,4 +3,5 @@ bigDataUrl GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.bigGenePred.bb
 shortLabel BC lncRNA repository (PMID: 26236012)
 longLabel Breast Cancer lncRNA repository (PMID: 26236012)
 type bigGenePred
+descriptionurl https://github.com/Kraus-Lab/publichubs#publichubs
 visibility dense
