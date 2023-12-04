@@ -1,7 +1,7 @@
 track bigGenePred
 bigDataUrl GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.bigGenePred.bb
 shortLabel BC lncRNA repository (PMID: 26236012)
-descriptionUrl https://www.ncbi.nlm.nih.gov/pubmed/26236012
+descriptionUrl https://www.ncbi.nlm.nih.gov/pubmed/26236012.html
 longLabel Breast Cancer lncRNA repository (PMID: 26236012)
 type bigGenePred
 visibility dense
