@@ -1,0 +1,83 @@
+<p>The simpliest way to add a description to your track is to add an
+<a href="https://genome.ucsc.edu/goldenpath/help/trackDb/trackDbHub.html#html">html declaration</a>
+in each of your track stanzas to define the location of the html. For instance, adding
+<em><code>html https://genome.ucsc.edu/goldenPath/help/examples/hubExamples/templatePage.html</code></em> would define this page as your track description page.</p>
+
+<h2>Description</h2>
+The description should help users understand the content of the tracks and reviews the concepts
+or analysis represented. Often a publication abstract can provide a good description.
+
+<p>
+Example text: This track represents the <a href="http://www.ensembl.org/" target="_blank">Ensembl</a>
+Regulatory Annotation of regional function and activity in each of 17 human cell types. The Ensembl
+Regulatory Build provides a genome-wide set of regions that are likely to be involved in gene regulation.
+These regions are classified into six functional types (see below).
+</p>
+
+<h2>Display Conventions and Configuration</h2>
+This section describes track configuration controls, or any special display conventions such as the
+meaning of different colors in your tracks. 
+
+<p>
+Example text: The colours used for each of the functional classification follow the agreed ENCODE
+segmentation standard:
+</p>
+<ul>
+<li><span style='border: 2px inset #000000; background-color:#FF0000;'>&nbsp;Bright Red&nbsp;</span> - Predicted promoters
+<li><span style='border: 2px inset #000000; background-color:#FF6969;'>&nbsp;Light Red&nbsp;</span> - Predicted promoter flanking regions
+<li><span style='border: 2px inset #000000; background-color:#FACA00;'>&nbsp;Orange&nbsp;</span> - Predicted enhancers
+<li><span style='border: 2px inset #000000; background-color:#0ABEFE;'>&nbsp;Blue&nbsp;</span> - CTCF binding sites
+<li><span style='border: 2px inset #000000; background-color:#D19D00;'>&nbsp;Gold&nbsp;</span> - Unannotated transcription factor binding sites
+<li><span style='border: 2px inset #000000; background-color:#FFFC04;'>&nbsp;Yellow&nbsp;</span> - Unannotated open chromatin regions
+</ul>
+(Example from the
+<a href="http://genome.ucsc.edu/cgi-bin/hgTrackUi?db=hg38&hubUrl=http://ftp.ensembl.org/pub/papers/regulation/hub.txt&g=hub_396407_ProjectedSegments"
+target="_blank">Ensembl Regulatory Build Public Hub</a>)
+</p>
+
+<h2>Methods</h2>
+This section describes the methods used to generate and analyze the data and helps users
+understand how the track data was produced and sometimes has subsections if useful. 
+
+<p>
+Example text: 
+<ul>
+<h3>Process 1</h3>
+First the data was processed with...
+
+<h3>Process 2</h3>
+Then the data was processed with the X algorithm, which...
+
+<h3>Notes</h3>
+Please take note that with this method...    For a full or a description of the methods used, refer to
+Author <em>et al</em>. (2016) in the References section below.
+</p>
+</ul>
+
+<h2>Credits</h2>
+Credits list the individuals and/or organizations who contributed to the collection and
+analysis of the data. Be sure to include a preferred contact email address for users who have
+questions concerning the data.
+
+<p>
+Example text: Data were generated and processed at the X Institute. For inquiries, please
+contact us at the following address: info (at) X.institute.org
+</p>
+
+<h2>References</h2>
+This section describes relevant literature references and/or websites that provide background
+or supporting information about the data.
+
+<p>
+Example Text:
+Zerbino DR, Johnson N, Juetteman T, Sheppard D, Wilder SP, Lavidas I, Nuhn M, Perry E, Raffaillac-
+Desfosses Q, Sobral D <em>et al</em>.
+<a href="http://www.database.oxfordjournals.org/cgi/pmidlookup?view=long&amp;pmid=26888907"
+target="_blank">
+Ensembl regulation resources</a>.
+<em>Database (Oxford)</em>. 2016;2016.
+PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/26888907" target="_blank">26888907</a>; PMC: <a
+href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4756621/" target="_blank">PMC4756621</a>
+</p>
+
+
