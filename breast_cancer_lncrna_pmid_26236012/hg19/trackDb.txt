@@ -5,4 +5,4 @@ descriptionUrl https://www.ncbi.nlm.nih.gov/pubmed/26236012
 longLabel Breast Cancer lncRNA repository (PMID: 26236012)
 type bigGenePred
 visibility dense
-htmlPath https://github.com/Kraus-Lab/publichubs/blob/master/README.md
+html https://github.com/Kraus-Lab/publichubs/blob/master/README.md
