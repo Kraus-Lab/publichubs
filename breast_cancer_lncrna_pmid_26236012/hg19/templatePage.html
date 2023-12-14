@@ -4,80 +4,54 @@ in each of your track stanzas to define the location of the html. For instance, 
 <em><code>html https://genome.ucsc.edu/goldenPath/help/examples/hubExamples/templatePage.html</code></em> would define this page as your track description page.</p>
 
 <h2>Description</h2>
-The description should help users understand the content of the tracks and reviews the concepts
-or analysis represented. Often a publication abstract can provide a good description.
+We describe a computational approach that integrates GRO-seq and RNA-seq data to annotate long noncoding RNAs (lncRNAs), with increased sensitivity for low-abundance lncRNAs. 
+We used this approach to characterize the lncRNA transcriptome in MCF-7 human breast cancer cells, including >700 previously unannotated lncRNAs. 
+We then used information about the (1) transcription of lncRNA genes from GRO-seq, (2) steady-state levels of lncRNA transcripts in cell lines and patient samples from RNA-seq, and (3) histone modifications and factor binding at lncRNA gene promoters from ChIP-seq to explore lncRNA gene structure and regulation, as well as lncRNA transcript stability, regulation, and function. 
+Functional analysis of selected lncRNAs with altered expression in breast cancers revealed roles in cell proliferation, regulation of an E2F-dependent cell-cycle gene expression program, and estrogen-dependent mitogenic growth. 
+Collectively, our studies demonstrate the use of an integrated genomic and molecular approach to identify and characterize growth-regulating lncRNAs in cancers.
 
 <p>
-Example text: This track represents the <a href="http://www.ensembl.org/" target="_blank">Ensembl</a>
-Regulatory Annotation of regional function and activity in each of 17 human cell types. The Ensembl
-Regulatory Build provides a genome-wide set of regions that are likely to be involved in gene regulation.
-These regions are classified into six functional types (see below).
+This track represents the Bancer lncRNA track.
 </p>
 
-<h2>Display Conventions and Configuration</h2>
-This section describes track configuration controls, or any special display conventions such as the
-meaning of different colors in your tracks. 
-
-<p>
-Example text: The colours used for each of the functional classification follow the agreed ENCODE
-segmentation standard:
-</p>
-<ul>
-<li><span style='border: 2px inset #000000; background-color:#FF0000;'>&nbsp;Bright Red&nbsp;</span> - Predicted promoters
-<li><span style='border: 2px inset #000000; background-color:#FF6969;'>&nbsp;Light Red&nbsp;</span> - Predicted promoter flanking regions
-<li><span style='border: 2px inset #000000; background-color:#FACA00;'>&nbsp;Orange&nbsp;</span> - Predicted enhancers
-<li><span style='border: 2px inset #000000; background-color:#0ABEFE;'>&nbsp;Blue&nbsp;</span> - CTCF binding sites
-<li><span style='border: 2px inset #000000; background-color:#D19D00;'>&nbsp;Gold&nbsp;</span> - Unannotated transcription factor binding sites
-<li><span style='border: 2px inset #000000; background-color:#FFFC04;'>&nbsp;Yellow&nbsp;</span> - Unannotated open chromatin regions
-</ul>
-(Example from the
-<a href="http://genome.ucsc.edu/cgi-bin/hgTrackUi?db=hg38&hubUrl=http://ftp.ensembl.org/pub/papers/regulation/hub.txt&g=hub_396407_ProjectedSegments"
-target="_blank">Ensembl Regulatory Build Public Hub</a>)
-</p>
 
 <h2>Methods</h2>
-This section describes the methods used to generate and analyze the data and helps users
-understand how the track data was produced and sometimes has subsections if useful. 
-
 <p>
-Example text: 
 <ul>
 <h3>Process 1</h3>
-First the data was processed with...
+Kraus Lab Breast Bancer lncRNA track (pmid: 26236012)
 
-<h3>Process 2</h3>
-Then the data was processed with the X algorithm, which...
+Step1: Download gtfToGenePred and then genePredToBigGenePred For Linux: wget http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/gtfToGenePred wget http://hgdownload.soe.ucsc.edu/admin/exe/linux.x86_64/genePredToBigGenePred For MacOS: wget http://hgdownload.soe.ucsc.edu/admin/exe/macOSX.x86_64/gtfToGenePred wget http://hgdownload.soe.ucsc.edu/admin/exe/macOSX.x86_64/genePredToBigGenePred
+
+wget http://genome.ucsc.edu/goldenPath/help/examples/bigGenePred.as wget http://hgdownload.soe.ucsc.edu/goldenPath/hg19/bigZips/hg19.chrom.sizes -O chrom.sizes wget http://hgdownload.soe.ucsc.edu/admin/exe/macOSX.x86_64/bedToBigBed
+
+Step2: gtfToGenePred GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.gtf GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.genePred genePredToBigGenePred GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.genePred GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.bigGenePred #NOTE: The .bigGenePred file generated above does not have all the required columns.(https://genome.ucsc.edu/goldenpath/help/bigGenePred.html), and then convert it to a bigBed file.
+
+Step3: cat GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.bigGenePred | awk '{print $1,$2,$3,$4,$5,$6,$7,$8,$9,$10,$11,$12,$4,$13,$14,$15,$4,$4,$4,$16}' | sort -k1,1 -k2,2n > GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.bigGenePred.txt
+
+Step4: bedToBigBed -as=bigGenePred.as -type=bed12+8 GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.bigGenePred.txt chrom.sizes GSE63189_Catalog_of_lncRNAs_in_MCF-7cells.bigGenePred.bb
+
+Step5: Use the "Raw" text display for the link to hub to give the following URL https://raw.githubusercontent.com/Kraus-Lab/publichubs/master/breast_cancer_lncrna_pmid_26236012/hub.txt
 
 <h3>Notes</h3>
-Please take note that with this method...    For a full or a description of the methods used, refer to
-Author <em>et al</em>. (2016) in the References section below.
+For a full or a description of the methods used, refer to Sun <em>et al</em>. (2015) in the References section below.
 </p>
 </ul>
 
 <h2>Credits</h2>
-Credits list the individuals and/or organizations who contributed to the collection and
-analysis of the data. Be sure to include a preferred contact email address for users who have
-questions concerning the data.
-
 <p>
-Example text: Data were generated and processed at the X Institute. For inquiries, please
-contact us at the following address: info (at) X.institute.org
+Data were generated and processed at the Laboratory of Signaling and Gene Regulation, Cecil H. and Ida Green Center for Reproductive Biology Sciences and Division of Basic Reproductive Biology Research, Department of Obstetrics and Gynecology, University of Texas Southwestern Medical Center, Dallas, TX 75390, USA. 
+For inquiries, please contact us at the following address: lee.kraus(at) utsouthwestern.edu
 </p>
 
 <h2>References</h2>
-This section describes relevant literature references and/or websites that provide background
-or supporting information about the data.
-
 <p>
-Example Text:
-Zerbino DR, Johnson N, Juetteman T, Sheppard D, Wilder SP, Lavidas I, Nuhn M, Perry E, Raffaillac-
-Desfosses Q, Sobral D <em>et al</em>.
-<a href="http://www.database.oxfordjournals.org/cgi/pmidlookup?view=long&amp;pmid=26888907"
-target="_blank">
+Sun M, Gadad SS, Kim DS, Kraus WL <em>et al</em>.
+<a href="https://pubmed.ncbi.nlm.nih.gov/26236012/">
 Ensembl regulation resources</a>.
-<em>Database (Oxford)</em>. 2016;2016.
-PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/26888907" target="_blank">26888907</a>; PMC: <a
-href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4756621/" target="_blank">PMC4756621</a>
+<em>Database (Mol Cell)</em>. 2015;2015.
+PMID: <a href="http://www.ncbi.nlm.nih.gov/pubmed/26236012" target="_blank">26236012</a>; PMC: <a
+href="http://www.ncbi.nlm.nih.gov/pmc/articles/PMC4546522/" target="_blank">PMC4546522</a>
 </p>
 
 
